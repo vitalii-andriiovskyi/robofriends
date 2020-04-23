@@ -8,6 +8,7 @@ import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 import { setSearchField, requestRobots } from '../actions';
+import Header from '../components/Header';
 
 const mapStateToProps = (state) => ({
   searchField: state.searchRobots.searchField,
@@ -38,7 +39,7 @@ class App extends Component {
       error === '' ? 
       (
         <div className='tc'>
-          <h1 className='f1'>Robofriends</h1>
+          <Header />
           <SearchBox searchChange={onSearchChange} />
           <Scroll>
             <ErrorBoundary>
